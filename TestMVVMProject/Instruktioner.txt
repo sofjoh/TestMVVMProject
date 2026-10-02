@@ -1,0 +1,12 @@
+Steg för steg hur man kan gå igenom koden för att förstå vad som händer :)
+
+1. Kolla i MainWindow.xaml. Där sätts DataContext till MainShellViewModel. Därför kollar den i MainShellViewModel.cs
+	när den får en binding.
+2. I MainWindow.xaml binder vi Content till CurrentGame. Eftersom DataContext är satt till MainShellViewModel
+	så går den vidare dit och kollar efter CurrentGame.
+3. I MainShellViewModel.cs hittar vi CurrentGame. CurrentGame är av typen CounterGameViewModel.
+4. Content Contols Content (i MainWindow.xaml) blir därför en CounterGameViewModel.
+5. WPF tittar i App.xaml och hittar data templates som är definierade där. Där hittar den en DataTemplate för CounterGameViewModel.
+6. CounterView.xaml visas nu inne i MainWindow.xaml (i ContentControl) eftersom vi har en DataTemplate för CounterGameViewModel som pekar på CounterView.xaml.
+7. I CounterView.xaml binder vi TextBlock.Text till Count. Eftersom DataContext är satt till CounterGameViewModel så går den vidare dit och kollar efter Count.
+8. Samma gäller med Button command som vi binder till IncreaseCommand.

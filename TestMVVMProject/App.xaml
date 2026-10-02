@@ -4,6 +4,8 @@
     xmlns:vm="clr-namespace:TestMVVMProject.ViewModels"
     xmlns:view="clr-namespace:TestMVVMProject.View"
     StartupUri="MainWindow.xaml">
+      
+      
     <!-- Denna resurs definierar hur en CounterGameViewModel ska visas i UI:t.
     Här kopplas viewModel till dess view. Alltså CounterGameViewModel till CounterView.
     På grund av detta kan vi i CounterView binda till egenskaper som finns i CounterGameViewModel 
@@ -15,4 +17,6 @@
             <view:CounterView />
         </DataTemplate>
     </Application.Resources>
+      
+      <!-- Man kan skapa fler resurser här om man vill-->
 </Application>

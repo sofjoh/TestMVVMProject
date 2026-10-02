@@ -9,7 +9,7 @@
         Width="500"
         Height="350"
         d:DataContext="{d:DesignInstance Type=vm:MainShellViewModel, IsDesignTimeCreatable=False}">
-    <!--Här ovan sätts datacontext för MainWindow. Därför kan vi binda till MainTitle som ligger i MainShellViewModel -->
+    <!--Här ovan sätts datacontext för MainWindow till MainShellViewModel. Därför kan vi binda till MainTitle som ligger i MainShellViewModel -->
     <Grid Margin="30">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
