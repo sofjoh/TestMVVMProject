@@ -1,6 +1,6 @@
 Steg för steg hur man kan gå igenom koden för att förstå vad som händer :)
 
-1. Kolla i MainWindow.xaml. Där sätts DataContext till MainShellViewModel. Därför kollar den i MainShellViewModel.cs
+1. DataContext för MainWindow sätts i MainWindow.xaml.cs. DataContext sätts till MainShellViewModel. Därför kollar MainWindow i MainShellViewModel.cs
 	när den får en binding.
 2. I MainWindow.xaml binder vi Content till CurrentGame. Eftersom DataContext är satt till MainShellViewModel
 	så går den vidare dit och kollar efter CurrentGame.

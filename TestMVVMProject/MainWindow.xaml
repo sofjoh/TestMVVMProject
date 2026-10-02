@@ -9,7 +9,7 @@
         Width="500"
         Height="350"
         d:DataContext="{d:DesignInstance Type=vm:MainShellViewModel, IsDesignTimeCreatable=False}">
-    <!--Här ovan sätts datacontext för MainWindow till MainShellViewModel. Därför kan vi binda till MainTitle som ligger i MainShellViewModel -->
+    <!-- Att det står ett d: framför, alltså d:DataContext, betyder att raden bara är till för att Visual Studio ska förstå vilken ViewModel du arbetar med när du designar XAML. -->
     <Grid Margin="30">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
