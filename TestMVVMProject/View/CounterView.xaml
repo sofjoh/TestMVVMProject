@@ -4,7 +4,7 @@
     <StackPanel Margin="30">
             <TextBlock 
                 FontSize="28"
-                Text="Ingen bindning" />
+                Text="{Binding Title}" />
             <TextBlock
                 Margin="0,20,0,0"
                 FontSize="22"

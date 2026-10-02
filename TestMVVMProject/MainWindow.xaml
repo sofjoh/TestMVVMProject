@@ -17,7 +17,8 @@
         <TextBlock
             Grid.Row="0"
             FontSize="28"
-            Text="Har ingen bindning" />
+            Text="{Binding MainTitle}" />
+        <!-- ContentControl är en plats i ditt UI där du kan visa olika vyer. Så här nedan säger vi: visa det som finns i CurrentGame här.-->
         <ContentControl
             Grid.Row="1"
             Content="{Binding CurrentGame}" />

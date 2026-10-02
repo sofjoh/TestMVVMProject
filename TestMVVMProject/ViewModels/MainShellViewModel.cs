@@ -19,6 +19,7 @@ public class MainShellViewModel
 
 
     public CounterGameViewModel CurrentGame { get; set; }
+    public string MainTitle { get; set; } = "Main Title!!!!!";
     public MainShellViewModel()
     {
         CurrentGame = new CounterGameViewModel();
