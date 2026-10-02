@@ -9,6 +9,7 @@
         Width="500"
         Height="350"
         d:DataContext="{d:DesignInstance Type=vm:MainShellViewModel, IsDesignTimeCreatable=False}">
+    <!--Här ovan sätts datacontext för MainWindow. Därför kan vi binda till MainTitle som ligger i MainShellViewModel -->
     <Grid Margin="30">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -18,7 +19,8 @@
             Grid.Row="0"
             FontSize="28"
             Text="{Binding MainTitle}" />
-        <!-- ContentControl är en plats i ditt UI där du kan visa olika vyer. Så här nedan säger vi: visa det som finns i CurrentGame här.-->
+        <!-- ContentControl är en plats i ditt UI där du kan visa olika vyer. Så här nedan säger vi: visa det som finns i CurrentGame här.
+        Eftersom dataContext är satt till MainShellViewModel så kommer den först kolla efter CurrentGame där. -->
         <ContentControl
             Grid.Row="1"
             Content="{Binding CurrentGame}" />

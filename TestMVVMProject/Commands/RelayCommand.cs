@@ -3,7 +3,7 @@ using System.Windows.Input;
 namespace TestMVVMProject.Commands;
 
 //Den här klassen implementerar ICommand och innehåller kod för två saker: vad som ska hända och, om man vill, om kommandot får köras.
-//Den här koden behöver man inte kunna skriva själv. Den kan hämtas och återanvändas. 
+//Den här koden behöver man INTE kunna skriva själv. Den kan hämtas och återanvändas. 
 public class RelayCommand : ICommand
 {
     private readonly Action<object> _execute;

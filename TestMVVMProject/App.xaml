@@ -1,21 +1,15 @@
-﻿<!--<Application x:Class="TestMVVMProject.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:TestMVVMProject"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>-->
-
-    
-    
-<Application x:Class="TestMVVMProject.App"
+﻿  <Application x:Class="TestMVVMProject.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vm="clr-namespace:TestMVVMProject.ViewModels"
     xmlns:view="clr-namespace:TestMVVMProject.View"
     StartupUri="MainWindow.xaml">
+    <!-- Denna resurs definierar hur en CounterGameViewModel ska visas i UI:t.
+    Här kopplas viewModel till dess view. Alltså CounterGameViewModel till CounterView.
+    På grund av detta kan vi i CounterView binda till egenskaper som finns i CounterGameViewModel 
+     
+    Detta gör att WPF automatiskt vet vilken View som ska visas när 
+    CounterGameViewModel används som innehåll i exempelvis en ContentControl -->
     <Application.Resources>
         <DataTemplate DataType="{x:Type vm:CounterGameViewModel}">
             <view:CounterView />
