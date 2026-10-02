@@ -10,11 +10,11 @@
                 FontSize="22"
                 Text="{Binding Count}"
                 />
-            <Button
+        <Button
                 Margin="0,20,0,0"
                 Padding="15,8"
                 Content="Öka"
                 Command="{Binding IncreaseCommand}" />
 
-        </StackPanel>
+    </StackPanel>
 </UserControl>

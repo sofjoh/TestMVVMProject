@@ -17,8 +17,15 @@
         </Grid.RowDefinitions>
         <TextBlock
             Grid.Row="0"
-            FontSize="28"
-            Text="{Binding MainTitle}" />
+            FontSize="25"
+            Text="{Binding MainTitle, FallbackValue='Default Title'}" />
+        <Button
+                Margin="0,34,0,0"
+                Padding="15,8"
+            Content="Ändra titel"
+            Command="{Binding ChangeTitleCommand}" 
+            CommandParameter="Ny titel från parameter"
+         />
         <!-- ContentControl är en plats i ditt UI där du kan visa olika vyer. Så här nedan säger vi: visa det som finns i CurrentGame här.
         Eftersom dataContext är satt till MainShellViewModel så kommer den först kolla efter CurrentGame där. -->
         <ContentControl
