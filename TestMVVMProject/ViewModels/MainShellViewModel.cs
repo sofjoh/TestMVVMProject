@@ -11,13 +11,24 @@ public class MainShellViewModel
 {
     //Title är en property som view kan binda till.
     //Samma med Count.
-    public string Title { get; set; }
-    public int Count { get; set; }
+    //public string Title { get; set; }
+    //public int Count { get; set; }
+
+
+    //public ICommand IncreaseCommand { get; private set; }
+
+
+    public CounterGameViewModel CurrentGame { get; set; }
+    public MainShellViewModel()
+    {
+        CurrentGame = new CounterGameViewModel();
+    }
+
+
 
     //IncreaseCommand är ett ICommand-objekt som View kan köra.
     //Tänk på ICommand som en koppling mellan en knapp i XAML och en metod i din ViewModel.
-    public ICommand IncreaseCommand { get; private set; }
-    public MainShellViewModel()
+/*    public MainShellViewModel()
     {
         Title = "Min lilla MVVM-app";
         Count = 0;
@@ -29,5 +40,5 @@ public class MainShellViewModel
     private void IncreaseCount()
     {
         Count++;
-    }
+    }*/
 }

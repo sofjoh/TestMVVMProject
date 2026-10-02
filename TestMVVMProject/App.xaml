@@ -1,9 +1,24 @@
-﻿<Application x:Class="TestMVVMProject.App"
+﻿<!--<Application x:Class="TestMVVMProject.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TestMVVMProject"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
+    </Application.Resources>
+</Application>-->
+
+    
+    
+<Application x:Class="TestMVVMProject.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:TestMVVMProject.ViewModels"
+    xmlns:view="clr-namespace:TestMVVMProject.View"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type vm:CounterGameViewModel}">
+            <view:CounterView />
+        </DataTemplate>
     </Application.Resources>
 </Application>
