@@ -16,7 +16,11 @@
         <DataTemplate DataType="{x:Type vm:CounterGameViewModel}">
             <view:CounterView />
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:ColorGameViewModel}">
+            <view:ColorView />
+        </DataTemplate>
+
+        <!-- Man kan skapa fler templates här om man vill-->
     </Application.Resources>
-      
-      <!-- Man kan skapa fler resurser här om man vill-->
 </Application>

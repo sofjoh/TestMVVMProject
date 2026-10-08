@@ -11,8 +11,9 @@ public class MainShellViewModel
 {
     //Här ser man att CurrentGame är en CounterGameViewModel. Alltså en annan vymodell som MainShellViewModel använder.
     //WPF kommer därför gå till App.xaml och leta efter en resurs som heter CounterGameViewModel.
-    public CounterGameViewModel CurrentGame { get; set; }
+    public object CurrentGame { get; set; }
     public ICommand ChangeTitleCommand { get; private set; }
+    public ICommand ChangeGameCommand { get; private set; }
     public string MainTitle { get; set; }
     public MainShellViewModel()
     {
@@ -20,10 +21,17 @@ public class MainShellViewModel
         CurrentGame = new CounterGameViewModel();
         ChangeTitleCommand = new RelayCommand(
             p => ChangeTitle(p?.ToString() ?? MainTitle));
+        ChangeGameCommand = new RelayCommand(
+            _ => ChangeGame());
     }
 
     private void ChangeTitle(string title)
     {
         MainTitle = title;
+    }
+
+    private void ChangeGame()
+    {
+        CurrentGame = new ColorGameViewModel();
     }
 }
