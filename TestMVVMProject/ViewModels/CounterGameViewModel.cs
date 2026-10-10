@@ -1,7 +1,6 @@
 ﻿using PropertyChanged;
 using TestMVVMProject.Commands;
 using System.Windows.Input;
-using TestMVVMProject.Commands;
 namespace TestMVVMProject.ViewModels;
 
 ////AddINotifyPropertyChangedInterface gör att klassen kan notifiera när en egenskap ändras.
